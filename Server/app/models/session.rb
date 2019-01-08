@@ -8,7 +8,7 @@ class Session
   field :title, type: String
   field :status, type: String # This is kind of status. Mongoid no enum, all plugins 3 years old not maintained. FUCK!
   field :duration, type: Float
-  field :startAt, type: DateTime
+  field :startAt, type: String
 
   validates_presence_of :title, :status, :startAt
 

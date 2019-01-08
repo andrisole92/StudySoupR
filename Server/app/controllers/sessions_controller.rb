@@ -5,12 +5,14 @@ class SessionsController < ApplicationController
   # GET /sessions.json
   # GET /sessions
   def index
+    print "Yoooo \n"
     @sessions = Session.all
     json_response(@sessions)
   end
 
   # POST /sessions
   def create
+    print "TEEEEST \n"
     @session = Session.new(session_params)
     if @session.save
       json_response(@session, :created)
